@@ -36,6 +36,7 @@ async function main() {
     const version = core.getInput('version');
     const token = core.getInput('token') || process.env.GITHUB_TOKEN;
     const ids = await fetchIds(token, version);
+    core.info(`Found ${ids.length} ids for version '${version}': ${ids}`)
     core.setOutput("ids", ids);
   } catch (error) {
     console.log(error)
