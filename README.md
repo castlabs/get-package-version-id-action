@@ -18,6 +18,11 @@ Note that the current implementation filters for the first 100 versions
 
 **Required** The name of the version that is being searched for, i.e. `1.0.0-SNAPSHOT` 
 
+## `token`
+
+The access to token. The token must have permissions to read packages. Defaults 
+to github.token.
+
 ## Outputs
 
 ## `ids`

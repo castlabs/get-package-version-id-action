@@ -4,6 +4,14 @@ inputs:
   version: 
     description: 'The name of the version'
     required: true
+
+  token:
+    description: >
+      Token with the necessary scopes to read package versions. 
+      Defaults to github.token scoped to the repo running the action.
+    required: false
+    default: ${{ github.token }}
+
 outputs:
   ids:
     description: 'Comma separated list of ids for the given version'
