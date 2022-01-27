@@ -1,0 +1,19 @@
+{
+  "name": "get-package-version-id-action",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "ncc build index.js --license LICENSE.txt"
+  },
+  "keywords": [],
+  "author": "Thasso Griebel",
+  "license": "MIT",
+  "dependencies": {
+    "@actions/core": "^1.6.0",
+    "@actions/github": "^5.0.0"
+  },
+  "devDependencies": {
+    "@vercel/ncc": "^0.33.1"
+  }
+}

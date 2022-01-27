@@ -1,0 +1,12 @@
+name: 'Package Version IDs'
+description: 'Find ids for package versions based on the version name'
+inputs:
+  version: 
+    description: 'The name of the version'
+    required: true
+outputs:
+  ids:
+    description: 'Comma separated list of ids for the given version'
+runs:
+  using: 'node16'
+  main: 'dist/index.js'
