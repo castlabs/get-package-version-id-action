@@ -37,6 +37,7 @@ A comma separated list of package version ids
   with:
     versions: "1.0-SNAPSHOT"
 - uses: actions/delete-package-versions@v2
+  if: ${{ steps.versions.outputs.ids != '' }}
   with:
-    package-version-ids: ${{ steps.versions.output.ids }}
+    package-version-ids: "${{ steps.versions.outputs.ids }}"
 
