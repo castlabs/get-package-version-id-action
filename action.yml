@@ -1,8 +1,8 @@
 name: 'Package Version IDs'
 description: 'Find ids for package versions based on the version name'
 inputs:
-  version: 
-    description: 'The name of the version'
+  version:
+    description: 'A regular expression that is matched against the name of the version'
     required: true
 
   token:

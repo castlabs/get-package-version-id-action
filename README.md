@@ -16,7 +16,9 @@ Note that the current implementation filters for the first 100 versions
 
 ## `version`
 
-**Required** The name of the version that is being searched for, i.e. `1.0.0-SNAPSHOT` 
+**Required** A regular expression that is matched against the name of the
+version that is being searched for, i.e. `1.0.0-SNAPSHOT` for an exact match
+or `.*-SNAPSHOT` for all snapshots.
 
 ## `token`
 
@@ -32,7 +34,7 @@ A comma separated list of package version ids
 ## Example usage
 
 ```
-- uses: castlabs/get-package-version-id-action@v1.0
+- uses: castlabs/get-package-version-id-action@v2.0
   id: versions
   with:
     versions: "1.0-SNAPSHOT"
