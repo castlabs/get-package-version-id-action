@@ -120,7 +120,7 @@ async function fetchIds(token, version) {
   }
 
   let results = [...new Set(versions)]
-  console.log(">> RESULTS ", JSON.stringify(results, null, 2))
+  core.info(JSON.stringify(results, null, 2))
   return results
 }
 
