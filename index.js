@@ -34,7 +34,7 @@ const VERSIONS_QUERY = `query Versions($repo: String!, $owner:String!, $cursor_p
  *
  * @param octokit The octokit instance
  * @param repo The repo
- * @param owner The ownser
+ * @param owner The owner
  * @param cursor_packages The packages cursor
  * @param cursor_versions The versions cursor
  * @return {Promise<*>} The raw response
@@ -100,6 +100,7 @@ function packagesCursors(response) {
 async function fetchIds(token, version) {
   const octokit = github.getOctokit(token)
   const {owner, repo} = github.context.repo
+  core.info(`Fetch '${version}' for owner '${owner}' and repo '${repo}'`)
   // the matcher for the version string
   const matcher = new RegExp('^' + version + '$')
 
