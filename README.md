@@ -35,11 +35,11 @@ A comma separated list of package version ids
 
 ```
 - uses: castlabs/get-package-version-id-action@v2.0
-  id: versions
+  id: version
   with:
-    versions: "1.0-SNAPSHOT"
+    version: "1.0-SNAPSHOT"
 - uses: actions/delete-package-versions@v2
-  if: ${{ steps.versions.outputs.ids != '' }}
+  if: ${{ steps.version.outputs.ids != '' }}
   with:
     package-version-ids: "${{ steps.versions.outputs.ids }}"
 
